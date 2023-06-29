@@ -20,4 +20,6 @@ system design base on airbnb information about visual system design
 
 device: support web (mobile, tablet and desktop)
 
+using sass for styling
+
 # Others
