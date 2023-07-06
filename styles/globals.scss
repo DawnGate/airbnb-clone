@@ -1,3 +1,9 @@
+@import "variables";
+
+:root {
+  --black-color: "#000";
+}
+
 html,
 body,
 ol,
@@ -9,14 +15,13 @@ dl,
 dd {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: $font-body;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  @include prefix(box-sizing, border-box);
 }
 
 h1,
@@ -26,4 +31,11 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+html {
+  @include prefix(text-size-adjust, 100%);
+  &.scrollbar-gutter {
+    @include prefix(scrollbar-gutter, stable);
+  }
 }
