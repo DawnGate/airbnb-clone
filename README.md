@@ -8,7 +8,8 @@ This project is like the name: try another version simpler of air bnb
 # Tech stacks
 
 Base on Nextjs for implement a server side rendering + client side rendering.
-Using both swc and swr.
+
+Using graphql and apollo for management server data
 
 For state management: using redux, context.
 
@@ -23,4 +24,3 @@ device: support web (mobile, tablet and desktop)
 using sass for styling
 
 # Others
-

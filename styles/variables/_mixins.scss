@@ -1,7 +1,7 @@
 // mixin to prefix a property
-@mixin prefix($property, $value, $prefixes: [ "webkit", "moz", "ms"]) {
+@mixin prefix($property, $value, $prefixes: (webkit, moz, ms)) {
   @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: $value;
+    -#{$prefix}-#{$property}: $value;
   }
 
   // output standard non-prefixed declaration

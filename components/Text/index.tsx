@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Text = () => {
+function Text() {
   return <p>hello</p>;
-};
+}
 export default Text;

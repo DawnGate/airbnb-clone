@@ -1,11 +1,10 @@
-import React from "react";
+import React from 'react'
 
-export interface BoxProps extends React.ComponentPropsWithoutRef<"div"> {
-  children?: React.ReactNode;
+interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {}
+
+function Box(props: BoxProps) {
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  return <div {...props} />
 }
 
-const Box = (props: BoxProps) => {
-  return <div {...props} />;
-};
-
-export default Box;
+export default Box

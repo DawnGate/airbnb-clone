@@ -1,24 +1,25 @@
-import React from "react";
+import React from 'react'
 
 // third party
-import clsx from "clsx";
+import clsx from 'clsx'
 
 // styles
-import styles from "./Button.module.scss";
+import styles from './Button.module.scss'
 
 interface ButtonProps {
-  variant?: "primary" | "secondary";
-  label: string;
-  onClick?: () => void;
+  variant?: 'primary' | 'secondary'
+  label: string
+  onClick?: () => void
 }
 
-const Button = ({ variant = "primary", label, ...props }: ButtonProps) => {
-  const buttonClass = clsx(styles.button, styles[variant]);
+function Button({ variant = 'primary', label, onClick }: ButtonProps) {
+  const buttonClass = clsx(styles.button, styles[variant])
 
   return (
-    <button className={buttonClass} {...props}>
+    <button type="button" className={buttonClass} onClick={onClick}>
       {label}
     </button>
-  );
-};
-export default Button;
+  )
+}
+
+export default Button
