@@ -1,5 +1,13 @@
-// this where redux store work
+import { configureStore } from '@reduxjs/toolkit'
 
-const store = {};
+import counterReducer from '@/store/features/counter/counterSlice'
 
-export default store;
+const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+})
+
+export type RootState = ReturnType<typeof store.getState>
+
+export type AppDispatch = typeof store.dispatch

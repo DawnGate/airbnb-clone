@@ -1,3 +1,98 @@
+@import 'styles/variables/_fonts.scss';
+
 .text {
-  font-size: 16px;
+  font-family: $font-body;
+  line-height: $line-height-none;
+}
+
+.font-weight-normal {
+  font-weight: $font-weight-normal;
+}
+
+.font-weight-medium {
+  font-weight: $font-weight-medium;
+}
+
+.font-weight-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.font-weight-bold {
+  font-weight: $font-weight-bold;
+}
+
+.letter-spacing-normal {
+  letter-spacing: $letter-spacing-normal;
+}
+
+.letter-spacing-wide {
+  letter-spacing: $letter-spacing-wide;
+}
+
+.size-xs {
+  font-size: $font-size-xs;
+  line-height: $line-height-xs;
+}
+
+.size-sm {
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+}
+
+.size-md {
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+}
+
+.size-lg {
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
+}
+
+.size-xl {
+  font-size: $font-size-xl;
+  line-height: $line-height-xl;
+}
+
+.size-2xl {
+  font-size: $font-size-2xl;
+  line-height: $line-height-2xl;
+}
+
+.size-3xl {
+  font-size: $font-size-3xl;
+  line-height: $line-height-3xl;
+}
+
+.size-4xl {
+  font-size: $font-size-4xl;
+  line-height: $line-height-4xl;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.casing-none {
+  text-transform: none;
+}
+
+.casing-uppercase {
+  text-transform: uppercase;
+}
+
+.casing-lowercase {
+  text-transform: lowercase;
+}
+
+.casing-capitalize {
+  text-transform: capitalize;
 }

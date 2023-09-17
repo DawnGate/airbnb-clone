@@ -12,10 +12,12 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "clsx": "^2.0.0",
     "next": "13.4.7",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-redux": "^8.1.2"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.24",

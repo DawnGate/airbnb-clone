@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { ButtonHTMLAttributes } from 'react'
 
 // third party
 import clsx from 'clsx'
@@ -6,20 +8,26 @@ import clsx from 'clsx'
 // styles
 import styles from './Button.module.scss'
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary'
-  label: string
-  onClick?: () => void
 }
 
-function Button({ variant = 'primary', label, onClick }: ButtonProps) {
-  const buttonClass = clsx(styles.button, styles[variant])
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  (props, forwardRef) => {
+    const { variant = 'primary', className, ...buttonProps } = props
 
-  return (
-    <button type="button" className={buttonClass} onClick={onClick}>
-      {label}
-    </button>
-  )
-}
+    const buttonClass = clsx(styles.button, styles[variant], className)
+
+    return (
+      <button
+        type="button"
+        ref={forwardRef}
+        className={buttonClass}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...buttonProps}
+      />
+    )
+  }
+)
 
 export default Button
