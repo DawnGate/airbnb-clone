@@ -1,11 +1,10 @@
 {
   "extends": [
-    "next",
-    "next/core-web-vitals",
     "airbnb",
     "airbnb-typescript",
     "prettier",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "next/core-web-vitals"
   ],
   "parserOptions": {
     "project": "./tsconfig.json"
