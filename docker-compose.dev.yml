@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  airbnb-clone-dev:
+    container_name: airbnb-clone-dev
+    image: airbnb-clone-dev
+    build:
+      context: ./src
+      dockerfile: dev.Dockerfile
+    volumes:
+      # You can't mount all of your project => must mount a little bit of need file
+      # - ./src:/app/src
+    ports:
+      - 3000:3000

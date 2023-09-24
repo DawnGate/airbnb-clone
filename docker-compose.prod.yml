@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  airbnb-clone-prod:
+    container_name: airbnb-clone-prod
+    build:
+      context: .
+      dockerfile: prod.Dockerfile
+
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    external: true

@@ -1,5 +1,5 @@
-import Button from 'components/Button'
-import Text from 'components/Text'
+import Button from '@/components/Button'
+import Text from '@/components/Text'
 
 function Page() {
   return (
@@ -11,7 +11,7 @@ function Page() {
       </Button>
 
       <Text fontSize="xl" fontWeight="semibold" letterSpacing="wide">
-        Hello
+        Hello What I expected not for this
       </Text>
     </div>
   )

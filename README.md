@@ -23,4 +23,32 @@ device: support web (mobile, tablet and desktop)
 
 using sass for styling
 
+# Docker
+
+## dev
+
+```
+    docker network create my_network
+    docker compose -f docker-compose.dev.yml build
+    docker compose -f docker-compose.dev.yml up
+```
+
+## prod
+
+```
+    docker network create my_network
+    docker compose -f docker-compose.prod.yml build
+    docker compose -f docker-compose.prod.yml up -d
+```
+
+## useful commands
+
+```
+# Stop all running containers
+docker kill $(docker ps -aq) && docker rm $(docker ps -aq)
+
+# Free space
+docker system prune -af --volumes
+```
+
 # Others
